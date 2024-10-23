@@ -4,6 +4,7 @@ import {
   LinkedIn,
   Email,
   MusicNote,
+  MusicOff,
   Language,
 } from "@mui/icons-material";
 
@@ -15,6 +16,14 @@ export const Container = styled.div`
   height: 100vh;
   color: white;
   padding-top: 30px;
+
+  @media (max-width: 768px) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 15px;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -27,11 +36,30 @@ export const Nav = styled.nav`
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px 10px;
+  }
 `;
 
 export const Logo = styled.img`
   width: 40px;
   margin: 0px 50px;
+
+  @media (max-width: 768px) {
+    width: 35px;
+    margin: 0px 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: 30px;
+    margin: 0px 20px;
+  }
 `;
 
 export const NavItem = styled.a`
@@ -47,6 +75,16 @@ export const NavItem = styled.a`
   &:hover {
     color: #fde400;
   }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin: 0 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    margin: 0 20px;
+  }
 `;
 
 export const Greeting = styled.h1`
@@ -56,6 +94,20 @@ export const Greeting = styled.h1`
   font-style: normal;
   padding: 0px;
   margin: 0px;
+
+  @media (max-width: 1200px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 25px;
+    text-align: center;
+  }
 `;
 
 export const Name = styled.h2`
@@ -64,6 +116,18 @@ export const Name = styled.h2`
   text-align: center;
   padding: 0px;
   margin: 0px;
+
+  @media (max-width: 1200px) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 3rem;
+  }
 `;
 
 export const ExploreButton = styled.button`
@@ -85,6 +149,18 @@ export const ExploreButton = styled.button`
   &:hover {
     box-shadow: 10px 10px 20px rgba(253, 228, 0, 0.4);
   }
+
+  @media (max-width: 768px) {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+  }
 `;
 
 export const SocialIcons = styled.div`
@@ -95,12 +171,33 @@ export const SocialIcons = styled.div`
   position: fixed;
   bottom: 50px;
   left: 50px;
+
+  @media (max-width: 768px) {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    bottom: 20px;
+    left: 20px;
+  }
 `;
 
 export const FooterMusicIcon = styled.div`
   position: fixed;
   bottom: 50px;
   right: 40px;
+
+  @media (max-width: 768px) {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  @media (max-width: 480px) {
+    bottom: 20px;
+    right: 20px;
+  }
 `;
 
 export const Icon = styled.img`
@@ -109,6 +206,14 @@ export const Icon = styled.img`
   &:hover {
     box-shadow: 10px 10px 20px rgba(253, 228, 0, 0.4);
   }
+
+  @media (max-width: 768px) {
+    width: 25px;
+  }
+
+  @media (max-width: 480px) {
+    width: 20px;
+  }
 `;
 
-export { GitHub, LinkedIn, Email, MusicNote, Language };
+export { GitHub, LinkedIn, Email, MusicNote, MusicOff, Language };
