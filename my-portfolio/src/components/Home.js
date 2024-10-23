@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactHowler from "react-howler";
 import {
   Container,
   Nav,
@@ -13,6 +14,7 @@ import {
   LinkedIn,
   Email,
   MusicNote,
+  MusicOff,
   Language,
 } from "./StyledComponentHome";
 
@@ -25,6 +27,12 @@ const Home = () => {
     email: false,
     music: false,
   });
+
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const toggleMusic = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <Container>
@@ -100,21 +108,45 @@ const Home = () => {
         />
       </SocialIcons>
       <FooterMusicIcon>
-        <MusicNote
-          style={{
-            color: hoverState.music ? "#FDE400" : "white",
-            width: "25px",
-            height: "25px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() =>
-            setHoverState((prev) => ({ ...prev, music: true }))
-          }
-          onMouseLeave={() =>
-            setHoverState((prev) => ({ ...prev, music: false }))
-          }
-        />
+        {isPlaying ? (
+          <MusicNote
+            style={{
+              color: "#FDE400",
+              width: "25px",
+              height: "25px",
+              cursor: "pointer",
+            }}
+            onMouseEnter={() =>
+              setHoverState((prev) => ({ ...prev, music: true }))
+            }
+            onMouseLeave={() =>
+              setHoverState((prev) => ({ ...prev, music: false }))
+            }
+            onClick={toggleMusic}
+          />
+        ) : (
+          <MusicOff
+            style={{
+              color: "white",
+              width: "25px",
+              height: "25px",
+              cursor: "pointer",
+            }}
+            onMouseEnter={() =>
+              setHoverState((prev) => ({ ...prev, music: true }))
+            }
+            onMouseLeave={() =>
+              setHoverState((prev) => ({ ...prev, music: false }))
+            }
+            onClick={toggleMusic}
+          />
+        )}
       </FooterMusicIcon>
+      <ReactHowler
+        src="/audio/Marconi Union - Weightless (Official Video).mp3"
+        playing={isPlaying}
+        loop={true}
+      />
     </Container>
   );
 };
