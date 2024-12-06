@@ -1,6 +1,17 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+  .cursor {
+    background-color: #fde400;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
   body {
     background-color: black;
     margin: 0;
@@ -12,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .background {
-    background-image: url('/images/nasa-pd4lo70LdbI-unsplash.png');
+    background-image: url('/images/moonopacity.png');
     background-size: contain; 
     background-position: top center; 
     background-repeat: no-repeat; 
@@ -28,6 +39,10 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     position: relative; 
     z-index: 1;
+  }
+
+  .section-content {
+    transition: opacity 0.5s ease-in-out;
   }
 `;
 
