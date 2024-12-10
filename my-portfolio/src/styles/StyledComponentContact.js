@@ -2,72 +2,67 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   height: 100vh;
+  padding: 0 50px;
   color: white;
-  font-family: "Source Code Pro", monospace;
-  font-size: 60px;
-  font-weight: 900;
-  margin: 0px 50px;
-  padding-right: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+`;
+
+export const SocialIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 15px;
+  }
+`;
+
+export const TextSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 
   p {
-    width: 500px;
-    text-align: end;
-    margin: 0px 100px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
 
     span {
-      font-family: "Source Code Pro", monospace;
       font-weight: 200;
       font-style: italic;
     }
   }
 
   @media (max-width: 768px) {
-    font-size: 45px;
-    margin: 0px 30px;
-    padding-right: 30px;
+    align-items: center;
+    text-align: center;
 
     p {
-      width: 400px;
-      margin: 0px 50px;
-    }
-
-    button {
-      font-size: 15px;
-      width: 300px;
-      height: 50px;
+      font-size: 45px;
     }
   }
 
   @media (max-width: 480px) {
-    font-size: 35px;
-    margin: 0px 20px;
-    padding-right: 20px;
-
     p {
-      width: 300px;
-      margin: 0px 20px;
-    }
-
-    button {
-      font-size: 12px;
-      width: 250px;
-      height: 50px;
+      font-size: 35px;
     }
   }
 `;
 
 export const ContentButton = styled.div`
-  margin: 30px 100px;
-
-  @media (max-width: 768px) {
-    margin: 20px 50px;
-  }
-
-  @media (max-width: 480px) {
-    margin: 15px 20px;
-  }
+  margin: 10px;
 `;
