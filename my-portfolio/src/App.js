@@ -5,18 +5,6 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
-import ReactHowler from "react-howler";
-import {
-  SocialIcons,
-  FooterMusicIcon,
-  GitHub,
-  LinkedIn,
-  Email,
-  MusicNote,
-  MusicOff,
-} from "./styles/StyledComponentHome";
-import { FaBehance } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 
@@ -65,15 +53,6 @@ function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
 
   const [currentSection, setCurrentSection] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hoverState, setHoverState] = useState({
-    github: false,
-    linkedin: false,
-    email: false,
-    behance: false,
-    instagram: false,
-    music: false,
-  });
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -108,8 +87,6 @@ function App() {
 
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
-
-  const toggleMusic = () => setIsPlaying(!isPlaying);
 
   const sections = [
     {
@@ -163,137 +140,6 @@ function App() {
           />
         ))}
       </CarouselDots>
-
-      <SocialIcons>
-        <GitHub
-          style={{
-            color: hoverState.github ? "#FDE400" : "white",
-            width: "23px",
-            height: "23px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() =>
-            setHoverState((prev) => ({ ...prev, github: true }))
-          }
-          onMouseLeave={() =>
-            setHoverState((prev) => ({ ...prev, github: false }))
-          }
-          onClick={() =>
-            window.open("https://github.com/candelaojeda", "_blank")
-          }
-        />
-        <LinkedIn
-          style={{
-            color: hoverState.linkedin ? "#FDE400" : "white",
-            width: "25px",
-            height: "25px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() =>
-            setHoverState((prev) => ({ ...prev, linkedin: true }))
-          }
-          onMouseLeave={() =>
-            setHoverState((prev) => ({ ...prev, linkedin: false }))
-          }
-          onClick={() =>
-            window.open("https://www.linkedin.com/in/candela-ojeda/", "_blank")
-          }
-        />
-        <Email
-          style={{
-            color: hoverState.email ? "#FDE400" : "white",
-            width: "26px",
-            height: "26px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() =>
-            setHoverState((prev) => ({ ...prev, email: true }))
-          }
-          onMouseLeave={() =>
-            setHoverState((prev) => ({ ...prev, email: false }))
-          }
-          onClick={() => {
-            window.location.href =
-              "mailto:ojedacandelaco@gmail.com?subject=Contacto%20desde%20tu%20portfolio&body=Hola%20Candela,%20te%20contacto%20porque%20...";
-          }}
-        />
-        <FaBehance
-          style={{
-            color: hoverState.behance ? "#FDE400" : "white",
-            width: "26px",
-            height: "26px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() =>
-            setHoverState((prev) => ({ ...prev, behance: true }))
-          }
-          onMouseLeave={() =>
-            setHoverState((prev) => ({ ...prev, behance: false }))
-          }
-          onClick={() => {
-            window.open("https://www.behance.net/candelaojeda4", "_blank");
-          }}
-        />
-        <FaInstagram
-          style={{
-            color: hoverState.instagram ? "#FDE400" : "white",
-            width: "21px",
-            height: "21px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={() =>
-            setHoverState((prev) => ({ ...prev, instagram: true }))
-          }
-          onMouseLeave={() =>
-            setHoverState((prev) => ({ ...prev, instagram: false }))
-          }
-          onClick={() => {
-            window.open("https://www.instagram.com/candesign.art/", "_blank");
-          }}
-        />
-      </SocialIcons>
-
-      <FooterMusicIcon>
-        {isPlaying ? (
-          <MusicNote
-            style={{
-              color: "#FDE400",
-              width: "25px",
-              height: "25px",
-              cursor: "pointer",
-            }}
-            onMouseEnter={() =>
-              setHoverState((prev) => ({ ...prev, music: true }))
-            }
-            onMouseLeave={() =>
-              setHoverState((prev) => ({ ...prev, music: false }))
-            }
-            onClick={toggleMusic}
-          />
-        ) : (
-          <MusicOff
-            style={{
-              color: "white",
-              width: "25px",
-              height: "25px",
-              cursor: "pointer",
-            }}
-            onMouseEnter={() =>
-              setHoverState((prev) => ({ ...prev, music: true }))
-            }
-            onMouseLeave={() =>
-              setHoverState((prev) => ({ ...prev, music: false }))
-            }
-            onClick={toggleMusic}
-          />
-        )}
-      </FooterMusicIcon>
-
-      <ReactHowler
-        src="/audio/Marconi Union - Weightless (Official Video).mp3"
-        playing={isPlaying}
-        loop={true}
-      />
     </>
   );
 }
