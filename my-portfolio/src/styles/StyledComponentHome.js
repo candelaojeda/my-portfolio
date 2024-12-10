@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {
   GitHub,
   LinkedIn,
-  Email,
   MusicNote,
   MusicOff,
   Language,
@@ -18,11 +17,11 @@ export const Container = styled.div`
   padding-top: 30px;
 
   @media (max-width: 768px) {
-    padding-top: 20px;
+    padding: 15px;
   }
 
   @media (max-width: 480px) {
-    padding-top: 15px;
+    padding: 10px;
   }
 `;
 
@@ -39,6 +38,7 @@ export const Nav = styled.nav`
   @media (max-width: 768px) {
     flex-direction: column;
     top: 30px;
+    padding: 8px 15px;
   }
 
   @media (max-width: 480px) {
@@ -82,8 +82,8 @@ export const NavItem = styled.a`
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
-    margin: 0 20px;
+    font-size: 13px;
+    margin: 0 15px;
   }
 `;
 
@@ -93,20 +93,21 @@ export const Greeting = styled.h1`
   font-size: 40px;
   font-style: normal;
   padding: 0px;
-  margin: 0px;
+  margin: 0px 10px;
 
   @media (max-width: 1200px) {
-    font-size: 35px;
+    text-align: center;
+    font-size: 30px;
   }
 
   @media (max-width: 768px) {
-    font-size: 30px;
     text-align: center;
+    font-size: 22px;
   }
 
   @media (max-width: 480px) {
-    font-size: 25px;
     text-align: center;
+    font-size: 16px;
   }
 `;
 
@@ -115,7 +116,7 @@ export const Name = styled.h2`
   font-weight: 600;
   text-align: center;
   padding: 0px;
-  margin: 0px;
+  margin: 0px 10px;
   color: #fde400;
   background-color: transparent;
 
@@ -169,42 +170,20 @@ export const ExploreButton = styled.button`
   justify-content: center;
 `;
 
-export const SocialIcons = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  width: 180px;
-  margin-top: 20px;
-  position: fixed;
-  bottom: 50px;
-  left: 50px;
-
-  @media (max-width: 768px) {
-    bottom: 30px;
-    left: 30px;
-  }
-
-  @media (max-width: 480px) {
-    width: 80px;
-    bottom: 20px;
-    left: 20px;
-  }
-`;
-
 export const FooterMusicIcon = styled.div`
+  margin: 0px 20px;
   position: fixed;
   bottom: 50px;
-  right: 40px;
+  right: 50px;
 
   @media (max-width: 768px) {
     bottom: 30px;
-    right: 30px;
+    right: 15px;
   }
 
   @media (max-width: 480px) {
     bottom: 20px;
-    right: 20px;
+    right: 10px;
   }
 `;
 
@@ -224,4 +203,4 @@ export const Icon = styled.img`
   }
 `;
 
-export { GitHub, LinkedIn, Email, MusicNote, MusicOff, Language };
+export { GitHub, LinkedIn, MusicNote, MusicOff, Language };
