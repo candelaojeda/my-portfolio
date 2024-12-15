@@ -24,22 +24,31 @@ const GlobalStyles = createGlobalStyle`
 
   .background {
     background-image: url('/images/moonopacity.png');
-    background-size: contain; 
-    background-position: top center; 
-    background-repeat: no-repeat; 
-    height: 100vh; 
-    width: 100vw; 
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    transition: all 3s ease-in-out;
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (min-width: 50px) {
+      background-image: url('/images/bg-768.png');
       background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 3s ease-in-out;
     }
-
   }
-
 
   .App {
     height: 100%;
