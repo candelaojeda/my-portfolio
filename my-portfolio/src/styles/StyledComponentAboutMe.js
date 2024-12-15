@@ -11,8 +11,23 @@ export const Container = styled.div`
   padding: 0 20px;
   font-family: "Lexend Giga", sans-serif;
 
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 13px;
+  }
+
   @media (max-width: 1200px) {
-    margin: 0 50px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 15px;
+    margin: 0 20px;
+    font-size: 12px;
   }
 
   @media (max-width: 768px) {
@@ -29,27 +44,47 @@ export const Container = styled.div`
 export const Main = styled.h1`
   text-align: left;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 21px;
   font-style: normal;
   padding: 10px 20px;
   margin-bottom: 50px;
   border: 1px solid #515151;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.63);
-  width: auto;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
 
   @media (max-width: 1200px) {
-    font-size: 15px;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 800px) {
+    text-align: left;
+    font-size: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
   }
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    text-align: center;
+    font-size: 10px;
+    text-align: left;
+    padding: 5px 10px;
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
+    padding: 5px 10px;
   }
 `;
 
@@ -66,18 +101,36 @@ export const InitialText = styled.h1`
     color: #fde400;
   }
 
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    width: 80%;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 14px;
+    width: 90%;
+  }
+
   @media (max-width: 1200px) {
+    text-align: left;
     font-size: 15px;
-    width: 60%;
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
   }
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    text-align: center;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     width: 100%;
   }
@@ -86,20 +139,32 @@ export const InitialText = styled.h1`
 export const ContentTechnologies = styled.h1`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 13px;
+  }
+
   @media (max-width: 1200px) {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 11px;
   }
 
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 11px;
     justify-content: center;
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 10px;
     justify-content: center;
   }
 `;
@@ -117,17 +182,37 @@ export const Technology = styled.h1`
   border: 1px solid #fde400;
   border-radius: 20px;
 
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    padding: 8px 18px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 14px;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+  }
+
   @media (max-width: 1200px) {
-    font-size: 15px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 11px;
+    margin-right: 5px;
+    padding: 5px 10px;
   }
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 11px;
+    margin-right: 5px;
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px;
   }
 `;
@@ -143,18 +228,41 @@ export const TextRight = styled.h1`
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.63);
 
+  @media (max-width: 1440px) {
+    font-size: 14px;
+    padding: 8px 18px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 13px;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+  }
+
   @media (max-width: 1200px) {
-    font-size: 15px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 10px;
+    margin-right: 5px;
+    text-align: center;
+    margin-bottom: 5px;
   }
 
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 10px;
     text-align: center;
+    margin-bottom: 5px;
   }
 
   @media (max-width: 480px) {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
+    margin-bottom: 5px;
   }
 `;
 
@@ -170,39 +278,22 @@ export const FooterContainer = styled.div`
     font-size: 18px;
   }
 
-  @media (max-width: 935px) {
-    flex-direction: column;
+  @media (max-width: 935px) and (min-width: 768px) {
+    flex-direction: column-reverse;
     align-items: center;
 
     button {
       width: 100%;
       max-width: 300px;
-      margin: 10px 0;
+      margin: 15px 0;
       padding: 8px 16px;
-      font-size: 14px;
+      font-size: 10px;
     }
 
     ${TextRight} {
       text-align: center;
       margin-top: 10px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-
-    button {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px 0;
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-
-    ${TextRight} {
-      text-align: center;
-      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
 
