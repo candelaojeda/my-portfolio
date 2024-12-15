@@ -35,14 +35,64 @@ export const Nav = styled.nav`
   padding: 10px 20px;
   z-index: 1000;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (max-width: 800px) {
     top: 30px;
     padding: 8px 15px;
   }
 
-  @media (max-width: 480px) {
-    padding: 5px 10px;
+  @media (max-width: 768px) {
+    top: 30px;
+    padding: 8px 15px;
+  }
+`;
+
+export const HamburgerMenu = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0px 50px;
+  }
+`;
+
+export const MobileMenu = styled.div`
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: transparent;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 999;
+  margin: 0 20px;
+
+  a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 8px 0;
+  }
+`;
+
+export const NavMenu = styled.div`
+  display: flex;
+  gap: 15px;
+  margin: 0 50px;
+
+  @media (max-width: 1024px) {
+    gap: 5px;
+    margin: 0 50px;
+  }
+
+  @media (max-width: 800px) {
+    gap: 0;
+    margin: 0 10px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -62,7 +112,7 @@ export const Logo = styled.img`
 `;
 
 export const NavItem = styled.a`
-  margin: 0 40px;
+  margin: 0 50px;
   color: ${({ isActive }) => (isActive ? "#fde400" : "white")};
   text-decoration: none;
   font-family: "Lexend Giga", sans-serif;
@@ -74,6 +124,11 @@ export const NavItem = styled.a`
   &:hover {
     color: #fde400;
     cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 12px;
+    margin: 0 50px 0 10px;
   }
 
   @media (max-width: 768px) {
@@ -93,11 +148,20 @@ export const Greeting = styled.h1`
   font-size: 40px;
   font-style: normal;
   padding: 0px;
-  margin: 0px 10px;
+  margin: 0px 20px;
+
+  @media (max-width: 1366px) {
+    font-size: 30px;
+  }
 
   @media (max-width: 1200px) {
     text-align: center;
     font-size: 30px;
+  }
+
+  @media (max-width: 800px) {
+    text-align: center;
+    font-size: 25px;
   }
 
   @media (max-width: 768px) {
@@ -116,20 +180,28 @@ export const Name = styled.h2`
   font-weight: 600;
   text-align: center;
   padding: 0px;
-  margin: 0px 10px;
+  margin: 0px 20px;
   color: #fde400;
   background-color: transparent;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1366px) {
     font-size: 5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     font-size: 4rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 800px) {
     font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 
@@ -151,6 +223,19 @@ export const ExploreButton = styled.button`
 
   &:hover {
     box-shadow: 2px 2px 30px 2px rgba(253, 228, 0, 0.2);
+  }
+
+  @media (max-width: 1366px) {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    margin: 30px 0;
+  }
+
+  @media (max-width: 800px) {
+    width: 170px;
+    height: 45px;
+    font-size: 17px;
   }
 
   @media (max-width: 768px) {
