@@ -47,16 +47,28 @@ export const TextSection = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
+  @media (max-width: 1366px) {
+    gap: 10px;
 
     p {
+      margin: 10px 10px 10px 10px;
       font-size: 45px;
     }
   }
 
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    p {
+      font-size: 35px;
+    }
+  }
+
   @media (max-width: 480px) {
+    gap: 10px;
+
     p {
       font-size: 35px;
     }
@@ -64,5 +76,13 @@ export const TextSection = styled.div`
 `;
 
 export const ContentButton = styled.div`
-  margin: 10px;
+  margin: 8px;
+
+  @media (max-width: 1366px) {
+    button {
+      width: 300px;
+      height: 50px;
+      font-size: 15px;
+    }
+  }
 `;
