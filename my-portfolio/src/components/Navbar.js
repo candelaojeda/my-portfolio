@@ -76,6 +76,13 @@ const Navbar = ({ sections, currentSection, setCurrentSection }) => {
         </FooterMusicIcon>
       </NavMenu>
 
+      <ReactHowler
+        src="/audio/Marconi Union - Weightless (Official Video).mp3"
+        playing={isPlaying}
+        loop={true}
+        volume={0.5}
+      />
+
       <HamburgerMenu onClick={toggleMobileMenu}>
         {isMobileMenuOpen ? (
           <CloseIcon style={{ color: "white" }} />
