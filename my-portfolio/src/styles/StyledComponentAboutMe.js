@@ -52,6 +52,11 @@ export const Main = styled.h1`
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.63);
 
+  @media (max-width: 1600px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
   @media (max-width: 1440px) {
     font-size: 14px;
     margin-bottom: 20px;
@@ -101,6 +106,11 @@ export const InitialText = styled.h1`
     color: #fde400;
   }
 
+  @media (max-width: 1600px) {
+    font-size: 18px;
+    width: 80%;
+  }
+
   @media (max-width: 1440px) {
     font-size: 16px;
     width: 80%;
@@ -119,18 +129,19 @@ export const InitialText = styled.h1`
 
   @media (max-width: 800px) {
     text-align: left;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 5px;
+    width: 100%;
   }
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 10px;
     text-align: left;
     width: 100%;
   }
 
   @media (max-width: 480px) {
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
     width: 100%;
   }
@@ -155,11 +166,11 @@ export const ContentTechnologies = styled.h1`
   }
 
   @media (max-width: 800px) {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 10px;
     justify-content: center;
   }
 
@@ -201,7 +212,7 @@ export const Technology = styled.h1`
   }
 
   @media (max-width: 800px) {
-    font-size: 11px;
+    font-size: 10px;
     margin-right: 5px;
     padding: 5px 10px;
   }
@@ -248,7 +259,6 @@ export const TextRight = styled.h1`
 
   @media (max-width: 800px) {
     font-size: 10px;
-    margin-right: 5px;
     text-align: center;
     margin-bottom: 5px;
   }

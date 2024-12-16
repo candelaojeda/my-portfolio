@@ -22,9 +22,16 @@ export const SocialIcons = styled.div`
   align-items: center;
   margin: 10px;
 
+  @media (max-width: 800px) {
+    flex-direction: row;
+    gap: 15px;
+    margin: 5px 10px;
+  }
+
   @media (max-width: 768px) {
     flex-direction: row;
     gap: 15px;
+    margin: 5px 10px;
   }
 `;
 
@@ -51,8 +58,17 @@ export const TextSection = styled.div`
     gap: 10px;
 
     p {
-      margin: 10px 10px 10px 10px;
+      margin: 10px;
       font-size: 45px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    gap: 10px;
+
+    p {
+      margin: 5px;
+      font-size: 30px;
     }
   }
 
@@ -62,7 +78,8 @@ export const TextSection = styled.div`
     gap: 10px;
 
     p {
-      font-size: 35px;
+      margin: 10px;
+      font-size: 30px;
     }
   }
 
@@ -82,6 +99,14 @@ export const ContentButton = styled.div`
     button {
       width: 300px;
       height: 50px;
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    button {
+      width: 270px;
+      height: 40px;
       font-size: 15px;
     }
   }
