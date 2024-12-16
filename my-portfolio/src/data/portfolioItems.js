@@ -110,8 +110,8 @@ export const socialMedia = [
   },
   {
     category: "/ SOCIAL MEDIA",
-    title: "Instagram Featured Stories Aura Nails",
-    description: "Instagram feed design  Aura Nails.",
+    title: "Instagram Featured Stories",
+    description: "Instagram feed design Aura Nails.",
     image: "/images/aura-stories-sm.png",
     link: "https://www.behance.net/gallery/211276867/Logo-Design-Presentation",
   },
