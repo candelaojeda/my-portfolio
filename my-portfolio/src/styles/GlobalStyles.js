@@ -35,18 +35,55 @@ const GlobalStyles = createGlobalStyle`
     z-index: -1;
     transition: all 3s ease-in-out;
 
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.2; }
+    }
+
     @media (max-width: 768px) and (min-width: 50px) {
-      background-image: url('/images/bg-768.png');
-      background-size: cover;
-      background-position: top center;
+      background-color: black;
+      background-image: 
+        radial-gradient(2px 2px at 10% 20%, white, transparent), 
+        radial-gradient(2px 2px at 40% 50%, white, transparent),
+        radial-gradient(2px 2px at 70% 80%, white, transparent),
+        radial-gradient(2px 2px at 90% 10%, white, transparent),
+        radial-gradient(2px 2px at 20% 70%, white, transparent),
+        radial-gradient(2px 2px at 50% 90%, white, transparent),
+        radial-gradient(2px 2px at 80% 30%, white, transparent),
+
+        radial-gradient(2px 2px at 8% 18%, white, transparent), 
+        radial-gradient(2px 2px at 48% 58%, white, transparent),
+        radial-gradient(2px 2px at 78% 88%, white, transparent),
+        radial-gradient(2px 2px at 98% 18%, white, transparent),
+        radial-gradient(2px 2px at 28% 78%, white, transparent),
+        radial-gradient(2px 2px at 58% 98%, white, transparent),
+        radial-gradient(2px 2px at 88% 38%, white, transparent),
+
+        radial-gradient(2px 2px at 5% 25%, white, transparent), 
+        radial-gradient(2px 2px at 35% 45%, white, transparent),
+        radial-gradient(2px 2px at 65% 75%, white, transparent),
+        radial-gradient(2px 2px at 95% 25%, white, transparent),
+        radial-gradient(2px 2px at 25% 65%, white, transparent),
+        radial-gradient(2px 2px at 45% 95%, white, transparent),
+        radial-gradient(2px 2px at 75% 35%, white, transparent),
+
+        radial-gradient(1px 1px at 5% 10%, white, transparent), 
+        radial-gradient(1px 1px at 30% 40%, white, transparent),
+        radial-gradient(1px 1px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 90% 10%, white, transparent),
+        radial-gradient(1px 1px at 10% 60%, white, transparent),
+        radial-gradient(1px 1px at 40% 90%, white, transparent),
+        radial-gradient(1px 1px at 70% 30%, white, transparent);
+      background-size: 100% 100%;
       background-repeat: no-repeat;
-      height: 100vh;
-      width: 100vw;
       position: absolute;
       top: 0;
       left: 0;
       z-index: -1;
       transition: all 3s ease-in-out;
+      height: 100vh;
+      width: 100vw;
+      animation: twinkle 3s infinite ease-in-out;
     }
   }
 
@@ -58,10 +95,6 @@ const GlobalStyles = createGlobalStyle`
 
   .section-content {
     transition: opacity 0.5s ease-in-out;
-
-    @media (max-width: 768px) {
-      padding: 1rem;
-    }
   }
 
   @media (max-width: 1024px) {
