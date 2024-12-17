@@ -17,6 +17,10 @@ const CarouselDots = styled.div`
   bottom: 50px;
   left: 0;
   right: 0;
+
+  @media (max-width: 768px) {
+    margin: 0px;
+  }
 `;
 
 const Dot = styled.div`
