@@ -32,7 +32,7 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 15px;
-    margin: 0 20px;
+    margin: 0 !important;
   }
 
   @media (max-width: 480px) {
@@ -84,6 +84,7 @@ export const Main = styled.h1`
     font-size: 10px;
     text-align: left;
     padding: 5px 10px;
+    margin: 5px 10px;
   }
 
   @media (max-width: 480px) {
@@ -137,7 +138,8 @@ export const InitialText = styled.h1`
   @media (max-width: 768px) {
     font-size: 10px;
     text-align: left;
-    width: 100%;
+    width: 90%;
+    margin: 5px 10px;
   }
 
   @media (max-width: 480px) {
@@ -172,6 +174,7 @@ export const ContentTechnologies = styled.h1`
   @media (max-width: 768px) {
     font-size: 10px;
     justify-content: center;
+    margin: 5px 10px;
   }
 
   @media (max-width: 480px) {

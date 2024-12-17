@@ -42,7 +42,7 @@ export const Nav = styled.nav`
 
   @media (max-width: 768px) {
     top: 30px;
-    padding: 8px 15px;
+    padding: 8px 10px;
   }
 `;
 
