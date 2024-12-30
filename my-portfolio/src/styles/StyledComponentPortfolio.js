@@ -84,6 +84,12 @@ export const Nav = styled.div`
     top: 90px;
     margin: 10px 0px;
   }
+
+  @media (max-width: 320px) {
+    width: auto;
+    gap: 10px;
+    padding: 0px 30px !important;
+  }
 `;
 
 export const TagButton = styled.button`
@@ -135,6 +141,18 @@ export const TagButton = styled.button`
 
     &:hover {
       font-weight: 300;
+    }
+  }
+
+  @media (max-width: 320px) {
+    margin: 0;
+    width: 75px;
+    font-size: 9px;
+    padding: 0;
+
+    &:hover {
+      font-weight: 200;
+      letter-spacing: 0px !important;
     }
   }
 `;

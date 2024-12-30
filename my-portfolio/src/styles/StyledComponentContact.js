@@ -96,6 +96,14 @@ export const TextSection = styled.div`
       font-size: 30px;
     }
   }
+
+  @media (max-width: 320px) {
+    gap: 10px;
+
+    p {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const ContentButton = styled.div`
@@ -122,6 +130,14 @@ export const ContentButton = styled.div`
       width: 250px;
       height: 40px;
       font-size: 12px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    button {
+      width: 220px;
+      height: 35px;
+      font-size: 11px;
     }
   }
 `;

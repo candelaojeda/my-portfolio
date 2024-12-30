@@ -113,6 +113,10 @@ export const Main = styled.h1`
     width: 90%;
     border-radius: 12px;
   }
+
+  @media (max-width: 320px) {
+    font-size: 10px;
+  }
 `;
 
 export const InitialText = styled.h1`
@@ -171,6 +175,13 @@ export const InitialText = styled.h1`
 
   @media (max-width: 480px) {
     font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 10px;
     text-align: center;
     width: 100%;
     margin: 20px;
