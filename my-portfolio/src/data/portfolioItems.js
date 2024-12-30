@@ -8,6 +8,14 @@ export const projects = [
   },
   {
     category: "/ PROJECTS",
+    title: "Cryptocurrency Shopping",
+    description:
+      "Project of Laboratorio subject, virtual wallet of cryptocurrencies.",
+    image: "/images/Home.png",
+    link: "https://github.com/candelaojeda/wallet-criptocoins",
+  },
+  {
+    category: "/ PROJECTS",
     title: "Previous Personal Portfolio",
     description: "Design and development of my previous personal portfolio.",
     image: "/images/portfolioanterior.png",
