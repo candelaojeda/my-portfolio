@@ -225,7 +225,7 @@ export const ContentGrid = styled.div`
       .portfolio-item {
         width: 100px !important;
         height: 100px !important;
-        padding: 10px;
+        padding: 20px;
 
         h5 {
           margin: 5px 0;
@@ -288,8 +288,8 @@ export const ContentGrid = styled.div`
     .portfolio-grid-projects {
       height: 400px;
       .portfolio-item {
-        width: 130px !important;
-        height: 130px !important;
+        width: 170px !important;
+        height: 150px !important;
 
         h5 {
           margin: 8px 0;
