@@ -132,6 +132,7 @@ export const TagButton = styled.button`
 
     &:hover {
       font-weight: 300;
+      letter-spacing: 0px !important;
     }
   }
 
@@ -141,6 +142,7 @@ export const TagButton = styled.button`
 
     &:hover {
       font-weight: 300;
+      letter-spacing: 0px !important;
     }
   }
 
@@ -218,7 +220,7 @@ export const ContentGrid = styled.div`
   @media (max-width: 375px) {
     margin: 0px 30px;
     .portfolio-grid-projects {
-      height: 330px !important;
+      height: 350px !important;
 
       .portfolio-item {
         width: 100px !important;
@@ -244,7 +246,7 @@ export const ContentGrid = styled.div`
   @media (max-width: 480px) {
     margin: 0px 30px;
     .portfolio-grid-projects {
-      height: 300px !important;
+      height: 380px !important;
 
       .portfolio-item {
         h5 {

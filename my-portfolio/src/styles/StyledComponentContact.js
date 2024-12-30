@@ -90,9 +90,10 @@ export const TextSection = styled.div`
   }
 
   @media (max-width: 480px) {
-    gap: 10px;
+    gap: 20px;
 
     p {
+      margin-bottom: 40px;
       font-size: 30px;
     }
   }
@@ -101,7 +102,7 @@ export const TextSection = styled.div`
     gap: 10px;
 
     p {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 `;

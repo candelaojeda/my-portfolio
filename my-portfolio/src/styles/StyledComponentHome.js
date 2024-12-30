@@ -268,6 +268,7 @@ export const ExploreButton = styled.button`
     height: 45px;
     font-size: 16px;
     border-radius: 20px;
+    box-shadow: 2px 2px 30px 2px rgba(253, 228, 0, 0.2);
   }
 
   @media (max-width: 375px) {

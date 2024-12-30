@@ -91,7 +91,7 @@ export const Main = styled.h1`
     font-size: 12px;
     text-align: left;
     padding: 10px;
-    margin: 5px 10px;
+    margin: 10px;
     width: 50%;
     border-radius: 15px;
   }
@@ -99,8 +99,8 @@ export const Main = styled.h1`
   @media (max-width: 480px) {
     font-size: 12px;
     text-align: center;
-    padding: 5px 10px;
-    margin: 5px 10px;
+    padding: 10px;
+    margin: 0px 10px 25px 10px;
     width: 80%;
     border-radius: 12px;
   }
@@ -108,8 +108,8 @@ export const Main = styled.h1`
   @media (max-width: 375px) {
     font-size: 12px;
     text-align: center;
-    padding: 5px 10px;
-    margin: 5px 10px;
+    padding: 10px;
+    margin: 0px 10px 25px 10px;
     width: 90%;
     border-radius: 12px;
   }
@@ -171,20 +171,14 @@ export const InitialText = styled.h1`
     font-size: 12px;
     text-align: center;
     width: 100%;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 12px;
-    text-align: center;
-    width: 100%;
-    margin: 20px;
+    margin: 25px;
   }
 
   @media (max-width: 320px) {
     font-size: 10px;
     text-align: center;
     width: 100%;
-    margin: 20px;
+    margin: 25px;
   }
 `;
 
@@ -219,7 +213,7 @@ export const ContentTechnologies = styled.h1`
   @media (max-width: 480px) {
     font-size: 10px;
     justify-content: center;
-    margin: 10px 0px;
+    margin: 15px 0px;
   }
 `;
 
@@ -349,7 +343,7 @@ export const FooterContainer = styled.div`
 
   @media (max-width: 480px) {
     justify-content: center;
-    margin: 10px 0px;
+    margin: 30px 0px;
 
     button {
       font-size: 12px;
@@ -359,7 +353,7 @@ export const FooterContainer = styled.div`
 
   @media (max-width: 375px) {
     justify-content: center;
-    margin: 20px 0px 5px 0px;
+    margin: 30px 0px 5px 0px;
 
     button {
       font-size: 12px !important;
