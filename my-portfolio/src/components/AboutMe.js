@@ -30,6 +30,8 @@ const AboutMe = () => {
         <Technology>CSS</Technology>
         <Technology>Javascript</Technology>
         <Technology>Figma</Technology>
+        <Technology>Nextjs</Technology>
+        <Technology>Tailwind</Technology>
       </ContentTechnologies>
       <FooterContainer>
         <Button
