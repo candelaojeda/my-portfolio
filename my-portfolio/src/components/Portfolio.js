@@ -41,6 +41,7 @@ const Portfolio = () => {
               {projects.map((item, index) => (
                 <div key={index} className="portfolio-item">
                   <h5>{item.title}</h5>
+                  <p>{item.description}</p>
                   {item.link && (
                     <a
                       href={item.link}
@@ -77,6 +78,7 @@ const Portfolio = () => {
               {socialMedia.map((item, index) => (
                 <div key={index} className="portfolio-item">
                   <h5>{item.title}</h5>
+                  <p>{item.description}</p>
                   {!item.link && item.image && (
                     <a
                       href={item.image}
