@@ -21,6 +21,10 @@ const CarouselDots = styled.div`
   @media (max-width: 768px) {
     margin: 0px;
   }
+
+  @media (max-width: 480px) {
+    margin: 0px;
+  }
 `;
 
 const Dot = styled.div`
@@ -45,6 +49,19 @@ const Dot = styled.div`
     border: ${({ isActive }) => (isActive ? "2px solid #FDE400" : "none")};
     transition: border 0.3s ease, transform 0.3s ease;
     transform: ${({ isActive }) => (isActive ? "scale(1.2)" : "scale(1)")};
+  }
+
+  @media (max-width: 480px) {
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
+
+    &::after {
+      top: -4px;
+      left: -4px;
+      width: 10px;
+      height: 10px;
+    }
   }
 `;
 

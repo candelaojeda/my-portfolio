@@ -1,7 +1,7 @@
 export const projects = [
   {
     category: "/ PROJECTS",
-    title: "Current Personal Portfolio",
+    title: "Current Portfolio",
     description: "Design and development of my personal portfolio with React.",
     image: "/images/Home.png",
     link: "https://github.com/candelaojeda/my-portfolio/tree/main/my-portfolio",
@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     category: "/ PROJECTS",
-    title: "Previous Personal Portfolio",
+    title: "Previous Portfolio",
     description: "Design and development of my previous personal portfolio.",
     image: "/images/portfolioanterior.png",
     link: "https://playful-chebakia-348ef6.netlify.app/",
@@ -24,8 +24,7 @@ export const projects = [
   {
     category: "/ PROJECTS",
     title: "Pomodoro Timer",
-    description:
-      "Application with configuration options where you can set what work time you want to spend and what break time you need.",
+    description: "Application to set what work time and rest time.",
     image: "/images/pomodoro.png",
     link: "https://github.com/candelaojeda/pomodoro/tree/master",
   },
@@ -33,15 +32,14 @@ export const projects = [
     category: "/ PROJECTS",
     title: "Shop Online",
     description:
-      "Technical challenge that I did in the Onboarding 2021 of the Rooftop company through the Rooftop Academy.",
+      "Technical challenge that I did in the Onboarding 2021 of the Rooftop company.",
     image: "/images/shopOnline.png",
     link: "https://epic-babbage-7dbefe.netlify.app/",
   },
   {
     category: "/ PROJECTS",
     title: "Healthy Shop",
-    description:
-      "Website for healthy store. You can choose products to buy in different categories. It also has a meal plan and healthy food.",
+    description: "Website for healthy store.",
     image: "/images/tienda-saludable.png",
     link: "https://vigilant-kowalevski-796973.netlify.app/",
   },

@@ -41,6 +41,13 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media (max-width: 768px) and (min-width: 50px) {
+      transform: none !important;
+      transition: all 3s ease-in-out;
+      
+      .background {
+        display: none;
+      }
+
       background-color: black;
       background-image: 
         radial-gradient(2px 2px at 10% 20%, white, transparent), 
@@ -74,6 +81,23 @@ const GlobalStyles = createGlobalStyle`
         radial-gradient(1px 1px at 10% 60%, white, transparent),
         radial-gradient(1px 1px at 40% 90%, white, transparent),
         radial-gradient(1px 1px at 70% 30%, white, transparent);
+
+        radial-gradient(1px 1px at 1% 7%, white, transparent), 
+        radial-gradient(1px 1px at 1% 18%, white, transparent),
+        radial-gradient(1px 1px at 14% 19%, white, transparent),
+        radial-gradient(1px 1px at 15% 11%, white, transparent),
+        radial-gradient(1px 1px at 6% 13%, white, transparent),
+        radial-gradient(1px 1px at 7% 15%, white, transparent),
+        radial-gradient(1px 1px at 18% 17%, white, transparent);
+
+        radial-gradient(2px 2px at 2% 7%, white, transparent), 
+        radial-gradient(2px 2px at 3% 8%, white, transparent),
+        radial-gradient(2px 2px at 4% 9%, white, transparent),
+        radial-gradient(2px 2px at 5% 22%, white, transparent),
+        radial-gradient(2px 2px at 6% 23%, white, transparent),
+        radial-gradient(2px 2px at 7% 25%, white, transparent),
+        radial-gradient(2px 2px at 8% 17%, white, transparent);
+
       background-size: 100% 100%;
       background-repeat: no-repeat;
       position: absolute;

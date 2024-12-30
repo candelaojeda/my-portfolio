@@ -18,7 +18,7 @@ export const Nav = styled.div`
   align-items: flex-start;
   gap: 20px;
   padding: 0px 50px;
-  width: 18%;
+  width: 20%;
 
   @media (max-width: 1680px) {
     gap: 10px;
@@ -35,7 +35,7 @@ export const Nav = styled.div`
   @media (max-width: 1440px) {
     gap: 10px;
     padding: 0px 50px;
-    width: 22%;
+    width: 28%;
   }
 
   @media (max-width: 1366px) {
@@ -58,13 +58,31 @@ export const Nav = styled.div`
   @media (max-width: 1024px) {
     gap: 5px;
     padding: 0px 50px;
-    width: 31%;
+    width: 42%;
   }
 
   @media (max-width: 800px) {
     gap: 2px;
     padding: 0px 50px;
-    width: 36%;
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    gap: 2px;
+    padding: 0px 50px;
+    width: 70%;
+  }
+
+  @media (max-width: 480px) {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 90px;
+    margin: 10px 0px;
   }
 `;
 
@@ -86,21 +104,43 @@ export const TagButton = styled.button`
     letter-spacing: 1px;
   }
 
+  @media (max-width: 1440px) {
+    font-size: 18px;
+  }
+
   @media (max-width: 1152px) {
     font-size: 18px;
   }
 
   @media (max-width: 1024px) {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   @media (max-width: 800px) {
     font-size: 11px;
   }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 0 8px;
+
+    &:hover {
+      font-weight: 300;
+    }
+  }
+
+  @media (max-width: 375px) {
+    font-size: 9px;
+    padding: 0 5px;
+
+    &:hover {
+      font-weight: 300;
+    }
+  }
 `;
 
 export const ContentGrid = styled.div`
-  margin: 0px 50px;
+  margin: 0px 50px 0px 30px;
 
   //estilos para projects y para social media
 
@@ -113,6 +153,7 @@ export const ContentGrid = styled.div`
     margin: 20px 0;
     height: auto;
     overflow-y: auto;
+    overflow-x: hidden;
 
     .portfolio-item {
       display: flex;
@@ -149,6 +190,104 @@ export const ContentGrid = styled.div`
         text-decoration: none;
         color: #fde400;
         font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  // media queries proyetos y social media
+
+  @media (max-width: 375px) {
+    margin: 0px 30px;
+    .portfolio-grid-projects {
+      height: 330px !important;
+
+      .portfolio-item {
+        width: 100px !important;
+        height: 100px !important;
+        padding: 10px;
+
+        h5 {
+          margin: 5px 0;
+          font-size: 11px !important;
+        }
+
+        p {
+          font-size: 10px !important;
+        }
+
+        .a-project {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 0px 30px;
+    .portfolio-grid-projects {
+      height: 300px !important;
+
+      .portfolio-item {
+        h5 {
+          margin: 5px 0;
+          font-size: 11px !important;
+        }
+
+        p {
+          font-size: 10px !important;
+        }
+
+        .a-project {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-grid-projects {
+      height: 400px;
+      .portfolio-item {
+        width: 100px !important;
+        height: 100px !important;
+
+        h5 {
+          margin: 8px 0;
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .portfolio-grid-projects {
+      height: 400px;
+      .portfolio-item {
+        width: 130px !important;
+        height: 130px !important;
+
+        h5 {
+          margin: 8px 0;
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .portfolio-grid-projects {
+      .portfolio-item {
+        width: 180px;
+        height: 180px;
       }
     }
   }
@@ -272,134 +411,19 @@ export const ContentGrid = styled.div`
 
   @media (max-width: 480px) {
     .portfolio-grid-logos {
-      flex-wrap: nowrap;
-      overflow-x: scroll;
+      height: 300px;
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
+      padding: 0 10px;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     .portfolio-item-logos img {
-      width: 70px;
+      width: 100px;
     }
   }
-
-  // .portfolio-grid-projects {
-  //   display: flex;
-  //   flex-direction: column;
-  //   flex-wrap: nowrap;
-  //   overflow-y: auto;
-  //   overflow-x: hidden;
-  //   height: 500px;
-  //   padding: 5px;
-  //   margin: 10px 20px;
-  //   gap: 15px;
-  //   align-items: left;
-  // }
-
-  // .portfolio-grid-projects::-webkit-scrollbar {
-  //   width: 10px;
-  //   height: 10px;
-  // }
-
-  // .portfolio-grid-projects::-webkit-scrollbar-track {
-  //   background: #222;
-  //   border-radius: 10px;
-  // }
-
-  // .portfolio-grid-projects::-webkit-scrollbar-thumb {
-  //   background: #fde400;
-  //   border-radius: 10px;
-  //   border: 2px solid #222;
-  // }
-
-  // .portfolio-grid-projects::-webkit-scrollbar-thumb:hover {
-  //   background: #f1c40f;
-  // }
-
-  // .portfolio-item {
-  //   flex: 0 0 auto;
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-between;
-  //   align-items: left;
-  //   margin: 0px 20px;
-  //   max-width: 100%;
-  //   font-weight: 400;
-  //   font-size: 18px;
-  //   padding: 15px 25px;
-  //   border: 1px solid #515151;
-  //   border-radius: 20px;
-  //   background-color: rgba(0, 0, 0, 0.63);
-
-  //   h5 {
-  //     margin: 0 50px 0 20px;
-  //   }
-  // }
-
-  // .a-project {
-  //   font-size: 15px;
-  //   margin: 0 20px;
-  //   text-decoration: none;
-  //   color: #fde400;
-  // }
-
-  // //media queries projects
-
-  // @media (max-width: 1366px) {
-  //   .portfolio-grid-projects {
-  //     height: 360px;
-  //   }
-
-  //   .portfolio-item {
-  //     font-size: 15px;
-  //     padding: 10px 20px;
-  //     border-radius: 15px;
-  //   }
-  // }
-
-  // @media (max-width: 1280px) {
-  //   .portfolio-grid-projects {
-  //     height: 320px;
-  //   }
-
-  //   .portfolio-item {
-  //     font-size: 15px;
-  //     padding: 10px 20px;
-  //     border-radius: 15px;
-  //   }
-  // }
-
-  // @media (max-width: 1024px) {
-  //   .portfolio-grid-projects .portfolio-item {
-  //     font-size: 12px;
-  //     padding: 8px 18px;
-  //   }
-
-  //   .a-project {
-  //     font-size: 12px;
-  //   }
-  // }
-
-  // @media (max-width: 800px) {
-  //   section .portfolio-grid-projects {
-  //     height: 250px;
-
-  //     .portfolio-item {
-  //       font-size: 12px;
-  //       padding: 5px 8px;
-  //       border-radius: 15px;
-  //       margin: 0px 10px;
-  //     }
-
-  //     h5 {
-  //       margin: 0 50px 0 10px;
-  //       font-weight: 300;
-  //     }
-  //   }
-
-  //   .a-project {
-  //     font-size: 9px;
-  //     font-weight: 300;
-  //     margin: 0 10px;
-  //   }
-  // }
 `;

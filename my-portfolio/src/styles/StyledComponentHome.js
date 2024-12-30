@@ -59,11 +59,11 @@ export const HamburgerMenu = styled.div`
 export const MobileMenu = styled.div`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   position: absolute;
-  top: 60px;
+  top: 45px;
   right: 20px;
   background: transparent;
   font-weight: 400;
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 8px;
   z-index: 999;
   margin: 0 20px;
@@ -166,12 +166,23 @@ export const Greeting = styled.h1`
 
   @media (max-width: 768px) {
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
   }
 
   @media (max-width: 480px) {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 425px) {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  @media (max-width: 375px) {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0px;
   }
 `;
 
@@ -197,10 +208,18 @@ export const Name = styled.h2`
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 375px) {
     font-size: 2rem;
   }
 `;
@@ -248,6 +267,14 @@ export const ExploreButton = styled.button`
     width: 150px;
     height: 45px;
     font-size: 16px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 375px) {
+    width: 140px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 18px;
   }
 
   display: flex;
@@ -267,7 +294,7 @@ export const FooterMusicIcon = styled.div`
   }
 
   @media (max-width: 480px) {
-    bottom: 20px;
+    bottom: 40px;
     right: 10px;
   }
 `;

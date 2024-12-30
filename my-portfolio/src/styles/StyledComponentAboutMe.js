@@ -32,12 +32,19 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 15px;
-    margin: 0 !important;
+    margin: 20px !important;
   }
 
   @media (max-width: 480px) {
+    align-items: center;
     padding: 0 10px;
     margin: 0;
+  }
+
+  @media (max-width: 375px) {
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 10px;
   }
 `;
 
@@ -75,22 +82,36 @@ export const Main = styled.h1`
 
   @media (max-width: 800px) {
     text-align: left;
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 5px;
     padding: 5px 10px;
   }
 
   @media (max-width: 768px) {
-    font-size: 10px;
+    font-size: 12px;
     text-align: left;
-    padding: 5px 10px;
+    padding: 10px;
     margin: 5px 10px;
+    width: 50%;
+    border-radius: 15px;
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     padding: 5px 10px;
+    margin: 5px 10px;
+    width: 80%;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    width: 90%;
+    border-radius: 12px;
   }
 `;
 
@@ -130,22 +151,29 @@ export const InitialText = styled.h1`
 
   @media (max-width: 800px) {
     text-align: left;
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 5px;
     width: 100%;
   }
 
   @media (max-width: 768px) {
-    font-size: 10px;
+    font-size: 13px;
     text-align: left;
     width: 90%;
-    margin: 5px 10px;
+    margin: 10px;
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin: 20px;
   }
 `;
 
@@ -172,7 +200,7 @@ export const ContentTechnologies = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 10px;
+    font-size: 12px;
     justify-content: center;
     margin: 5px 10px;
   }
@@ -180,6 +208,7 @@ export const ContentTechnologies = styled.h1`
   @media (max-width: 480px) {
     font-size: 10px;
     justify-content: center;
+    margin: 10px 0px;
   }
 `;
 
@@ -221,7 +250,7 @@ export const Technology = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 12px;
     margin-right: 5px;
   }
 
@@ -267,15 +296,11 @@ export const TextRight = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 5px;
+    display: none;
   }
 
   @media (max-width: 480px) {
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 5px;
+    display: none;
   }
 `;
 
@@ -292,6 +317,7 @@ export const FooterContainer = styled.div`
   }
 
   @media (max-width: 935px) and (min-width: 768px) {
+    margin: 20px 5px 5px 5px;
     flex-direction: column-reverse;
     align-items: center;
 
@@ -311,9 +337,24 @@ export const FooterContainer = styled.div`
   }
 
   @media (max-width: 480px) {
+    justify-content: center;
+    margin: 10px 0px;
+
     button {
       font-size: 12px;
       padding: 8px 16px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    justify-content: center;
+    margin: 20px 0px 5px 0px;
+
+    button {
+      font-size: 12px !important;
+      padding: 5px 12px !important;
+      width: 200px !important;
+      height: 40px !important;
     }
   }
 `;

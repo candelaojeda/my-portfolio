@@ -33,6 +33,12 @@ export const SocialIcons = styled.div`
     gap: 15px;
     margin: 5px 10px;
   }
+
+  @media (max-width: 480px) {
+    flex-direction: row;
+    gap: 10px;
+    margin: 5px 10px;
+  }
 `;
 
 export const TextSection = styled.div`
@@ -87,7 +93,7 @@ export const TextSection = styled.div`
     gap: 10px;
 
     p {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
 `;
@@ -108,6 +114,14 @@ export const ContentButton = styled.div`
       width: 270px;
       height: 40px;
       font-size: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    button {
+      width: 250px;
+      height: 40px;
+      font-size: 12px;
     }
   }
 `;

@@ -42,12 +42,12 @@ const AboutMe = () => {
             color: "black",
             fontFamily: "Lexend Giga, sans-serif",
             fontWeight: 600,
-            fontSize: "16px",
+            fontSize: { xs: "12px", sm: "16px" },
             borderRadius: "30px",
             letterSpacing: "1px",
             boxShadow: "2px 2px 30px 2px rgba(253, 228, 0, 0.2)",
-            width: "250px",
-            height: "50px",
+            width: { xs: "200px", sm: "250px" },
+            height: { xs: "40px", sm: "50px" },
           }}
           href="/OjedaCandelaCV.pdf"
           download="OjedaCandela_CV.pdf"
