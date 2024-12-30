@@ -26,55 +26,79 @@ const Navbar = ({ sections, currentSection, setCurrentSection }) => {
   });
 
   return (
-    <Nav>
-      <Logo src="/logos/logo svg.svg" alt="Logo" style={{ height: "40px" }} />
+    <>
+      <Nav>
+        <Logo src="/logos/logo svg.svg" alt="Logo" style={{ height: "40px" }} />
 
-      <NavMenu>
-        {sections.map((section, index) => (
-          <NavItem
-            key={index}
-            onClick={() => setCurrentSection(index)}
-            isActive={currentSection === index}
-          >
-            {section.name}
-          </NavItem>
-        ))}
-        <FooterMusicIcon>
-          {isPlaying ? (
-            <MusicNote
-              style={{
-                color: hoverState.music ? "#FDE400" : "white",
-                width: "26px",
-                height: "26px",
-                cursor: "pointer",
-              }}
-              onMouseEnter={() =>
-                setHoverState((prev) => ({ ...prev, music: true }))
-              }
-              onMouseLeave={() =>
-                setHoverState((prev) => ({ ...prev, music: false }))
-              }
-              onClick={toggleMusic}
-            />
+        <NavMenu>
+          {sections.map((section, index) => (
+            <NavItem
+              key={index}
+              onClick={() => setCurrentSection(index)}
+              isActive={currentSection === index}
+            >
+              {section.name}
+            </NavItem>
+          ))}
+        </NavMenu>
+
+        <HamburgerMenu onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? (
+            <CloseIcon style={{ color: "white" }} />
           ) : (
-            <MusicOff
-              style={{
-                color: "white",
-                width: "25px",
-                height: "25px",
-                cursor: "pointer",
-              }}
-              onMouseEnter={() =>
-                setHoverState((prev) => ({ ...prev, music: true }))
-              }
-              onMouseLeave={() =>
-                setHoverState((prev) => ({ ...prev, music: false }))
-              }
-              onClick={toggleMusic}
-            />
+            <MenuIcon style={{ color: "white" }} />
           )}
-        </FooterMusicIcon>
-      </NavMenu>
+        </HamburgerMenu>
+
+        <MobileMenu isOpen={isMobileMenuOpen}>
+          {sections.map((section, index) => (
+            <a
+              key={index}
+              onClick={() => {
+                setCurrentSection(index);
+                toggleMobileMenu();
+              }}
+            >
+              {section.name}
+            </a>
+          ))}
+        </MobileMenu>
+      </Nav>
+      <FooterMusicIcon>
+        {isPlaying ? (
+          <MusicNote
+            style={{
+              color: hoverState.music ? "#FDE400" : "white",
+              width: "26px",
+              height: "26px",
+              cursor: "pointer",
+            }}
+            onMouseEnter={() =>
+              setHoverState((prev) => ({ ...prev, music: true }))
+            }
+            onMouseLeave={() =>
+              setHoverState((prev) => ({ ...prev, music: false }))
+            }
+            onClick={toggleMusic}
+          />
+        ) : (
+          <MusicOff
+            style={{
+              color: "white",
+              width: "25px",
+              height: "25px",
+              cursor: "pointer",
+            }}
+            onMouseEnter={() =>
+              setHoverState((prev) => ({ ...prev, music: true }))
+            }
+            onMouseLeave={() =>
+              setHoverState((prev) => ({ ...prev, music: false }))
+            }
+            onClick={toggleMusic}
+          />
+        )}
+      </FooterMusicIcon>
 
       <ReactHowler
         src="/audio/Marconi Union - Weightless (Official Video).mp3"
@@ -82,29 +106,7 @@ const Navbar = ({ sections, currentSection, setCurrentSection }) => {
         loop={true}
         volume={0.5}
       />
-
-      <HamburgerMenu onClick={toggleMobileMenu}>
-        {isMobileMenuOpen ? (
-          <CloseIcon style={{ color: "white" }} />
-        ) : (
-          <MenuIcon style={{ color: "white" }} />
-        )}
-      </HamburgerMenu>
-
-      <MobileMenu isOpen={isMobileMenuOpen}>
-        {sections.map((section, index) => (
-          <a
-            key={index}
-            onClick={() => {
-              setCurrentSection(index);
-              toggleMobileMenu();
-            }}
-          >
-            {section.name}
-          </a>
-        ))}
-      </MobileMenu>
-    </Nav>
+    </>
   );
 };
 
