@@ -100,7 +100,7 @@ export const Main = styled.h1`
     font-size: 12px;
     text-align: center;
     padding: 10px;
-    margin: 0px 10px 20px 10px;
+    margin: 0px 10px 10px 10px;
     width: 80%;
     border-radius: 12px;
   }
@@ -109,7 +109,7 @@ export const Main = styled.h1`
     font-size: 12px;
     text-align: center;
     padding: 10px;
-    margin: 0px 10px 20px 10px;
+    margin: 0px 10px 10px 10px;
     width: 90%;
     border-radius: 12px;
   }
@@ -171,14 +171,14 @@ export const InitialText = styled.h1`
     font-size: 12px;
     text-align: center;
     width: 100%;
-    margin: 20px;
+    margin: 10px;
   }
 
   @media (max-width: 320px) {
     font-size: 10px;
     text-align: center;
     width: 100%;
-    margin: 20px;
+    margin: 10px;
   }
 `;
 

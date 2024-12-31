@@ -28,7 +28,12 @@ const Navbar = ({ sections, currentSection, setCurrentSection }) => {
   return (
     <>
       <Nav>
-        <Logo src="/logos/logo svg.svg" alt="Logo" style={{ height: "40px" }} />
+        <Logo
+          src="/logos/logo svg.svg"
+          alt="Logo"
+          style={{ height: "40px", cursor: "pointer" }}
+          onClick={() => setCurrentSection(0)}
+        />
 
         <NavMenu>
           {sections.map((section, index) => (

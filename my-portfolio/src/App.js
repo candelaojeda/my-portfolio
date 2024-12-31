@@ -19,11 +19,9 @@ const CarouselDots = styled.div`
   right: 0;
 
   @media (max-width: 768px) {
-    margin: 0px;
-  }
-
-  @media (max-width: 480px) {
-    margin: 0px;
+    justify-content: center;
+    margin: 0 1rem;
+    gap: 20px;
   }
 `;
 
@@ -51,17 +49,30 @@ const Dot = styled.div`
     transform: ${({ isActive }) => (isActive ? "scale(1.2)" : "scale(1)")};
   }
 
-  @media (max-width: 480px) {
-    width: 6px;
-    height: 6px;
-    margin: 0 6px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
-    &::after {
-      top: -4px;
-      left: -4px;
-      width: 10px;
-      height: 10px;
-    }
+const Arrow = styled.div`
+  width: 28px;
+  height: 28px;
+  background-color: ${({ disabled }) => (disabled ? "#ccc" : "#fde400")};
+  color: ${({ disabled }) => (disabled ? "#777" : "#000")};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
+
+  &:hover {
+    background-color: ${({ disabled }) => (disabled ? "#ccc" : "#ffd700")};
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -72,7 +83,6 @@ function App() {
   });
 
   const [cursorVariant, setCursorVariant] = useState("default");
-
   const [currentSection, setCurrentSection] = useState(0);
 
   useEffect(() => {
@@ -128,6 +138,18 @@ function App() {
   const rotationAngles = [0, -90, -180, -270];
   const rotationAngle = rotationAngles[currentSection];
 
+  const goToNext = () => {
+    if (currentSection < sections.length - 1) {
+      setCurrentSection(currentSection + 1);
+    }
+  };
+
+  const goToPrevious = () => {
+    if (currentSection > 0) {
+      setCurrentSection(currentSection - 1);
+    }
+  };
+
   return (
     <>
       <GlobalStyles />
@@ -153,6 +175,9 @@ function App() {
       </div>
 
       <CarouselDots>
+        <Arrow onClick={goToPrevious} disabled={currentSection === 0}>
+          &#9664;
+        </Arrow>
         {sections.map((_, index) => (
           <Dot
             key={index}
@@ -160,6 +185,12 @@ function App() {
             isActive={currentSection === index}
           />
         ))}
+        <Arrow
+          onClick={goToNext}
+          disabled={currentSection === sections.length - 1}
+        >
+          &#9654;
+        </Arrow>
       </CarouselDots>
     </>
   );

@@ -52,14 +52,14 @@ export const projects = [
   },
   {
     category: "/ PROJECTS",
-    title: "Calculator",
-    description: "Desktop alculator application made for a university subject.",
+    title: "Desktop Calculator",
+    description: "Calculator application made for a university subject.",
     image: "/images/calculadora.png",
     link: "https://optimistic-benz-9c7eb5.netlify.app/",
   },
   {
     category: "/ PROJECTS",
-    title: "Desktop estimate App",
+    title: "Desktop Estimate App",
     description: "Application to estimate income and expenses.",
     image: "/images/estimate-app.png",
     link: "https://vigorous-bardeen-66d79f.netlify.app/",

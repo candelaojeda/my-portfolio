@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 100vh;
+    // height: 100vh;
     font-family: "Lexend Giga", sans-serif;
   }
 
