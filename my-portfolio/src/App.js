@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import GlobalStyles from "./styles/GlobalStyles";
 import { motion } from "framer-motion";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
@@ -176,7 +178,7 @@ function App() {
 
       <CarouselDots>
         <Arrow onClick={goToPrevious} disabled={currentSection === 0}>
-          &#9664;
+          <ArrowBackIcon />
         </Arrow>
         {sections.map((_, index) => (
           <Dot
@@ -189,7 +191,7 @@ function App() {
           onClick={goToNext}
           disabled={currentSection === sections.length - 1}
         >
-          &#9654;
+          <ArrowForwardIcon />
         </Arrow>
       </CarouselDots>
     </>

@@ -4,7 +4,7 @@ export const projects = [
     title: "Current Portfolio",
     description: "Design and development of my personal portfolio with React.",
     image: "/images/Home.png",
-    link: "https://github.com/candelaojeda/my-portfolio/tree/main/my-portfolio",
+    link: "https://www.behance.net/gallery/215849223/Personal-Portfolio-2025?",
   },
   {
     category: "/ PROJECTS",
