@@ -1,6 +1,14 @@
 export const projects = [
   {
     category: "/ PROJECTS",
+    title: "Challenge/Frontend Aerolab",
+    description:
+      "Web application that allows users to search for and digitally collect video games, using the IGDB API.",
+    image: "/images/Home.png",
+    link: "https://frontend-challenge-aerolab.vercel.app/",
+  },
+  {
+    category: "/ PROJECTS",
     title: "Current Portfolio",
     description: "Design and development of my personal portfolio with React.",
     image: "/images/Home.png",
